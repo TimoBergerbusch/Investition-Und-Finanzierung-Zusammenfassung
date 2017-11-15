@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm]{geometry}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{datetime}
+\usepackage{hyperref}
+\newdateformat{specialdate}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
+
+\newcommand{\red}[1]{\color{red}#1\color{black}}
+
+\begin{document}
+	
+	\title{Zusammenfassung - Investition und Finanzierung}
+	\author{Timo Bergerbusch 344408}
+	\date{\specialdate\today}
+	\maketitle
+	\section{Entscheidungsregeln}
+	\begin{enumerate}
+		\item Grenzrate der Substitution $GRS=GRT$ Grenzrate der Transformation
+			\begin{itemize}
+				\item Modellwelt Thema 1
+				\item benötigt differenzierbare Transformationsfunktion
+				\item Zwei-Zeitpunkt-Betrachtung
+			\end{itemize}
+		\item Grenzrendite = Kapitalmarktzins\label{2Investitionsregel}
+			\begin{itemize}
+				\item benötigt differenzierbare Transformationsfunktion
+				\item Zwei-Zeitpunkt-Betrachtung
+			\end{itemize}
+		\item Maximierung des Kapitalwertes 
+			\begin{itemize}
+				\item Auch für Mehr-Perioden-Fall anwendbar
+				\item auch für nicht bel. teilbare Projekte
+				\item echt besser als die \hyperref[2Investitionsregel]{2. Investitionsregel}
+			\end{itemize}
+	\end{enumerate}
+	
+	\section{Fachbegriffe}
+	\begin{itemize}
+		\item Investitionsertragsfunktion $F(I)$: Herleitung wie in \hyperref[Thema1Aufgabe1]{Thema 1 Aufgabe 1} \\
+			Verfügt über 3 Eigenschaften: \begin{enumerate}
+				\item $F(0)=0$
+				\item positiver Ertrag: $F'(I) >0$ für $I>0$
+				\item abnehmender Grenznutzen (degressiv): $F''(I) <0$ für $I>0$
+			\end{enumerate}
+		\item Rendite: $\frac{\text{Ertrag}\cdot100}{\text{Investition}}-1$\label{Rendite}
+		\item Transformationsfunktion:  $C_1=F(W_0-C_0)$
+		\item optimales Investitionsvolumen: \\
+			\textbf{Kriterium}: Steigung Transformationskurve $-F'(I) = -(1+i)$ Steigung Kapitalmarkt-gerade\\
+			$\max U(C_0;C_1)$ unter der NB $C_1=F(W_0-C_0)$
+			\begin{enumerate}
+				\item einsetzen von $C_1$
+				\item ableiten mittels $\frac{\partial U}{\partial C_0}$
+				\item lösen nach $C_0$
+			\end{enumerate}
+		\item Indifferenzkurve:
+			\begin{itemize}
+				\item[Def.:] eine Kurve im $(C_0;C_1)$-Diagramm für die ein Entscheider keinen unterschied zwischen dem $C_0$ Konsum jetzt oder dem $C_1$ Konsum in $t_1$ macht
+				\item bei geg. Nutzenfunktion $\overline{U}=C_0^x\cdot C_1^y \Leftrightarrow C_1 = \overline{U}^{\frac{1}{y}}\cdot C_0^{-\frac{x}{y}} $
+			\end{itemize}
+		\item Kapitalwert $\kappa$: 
+			\begin{itemize}
+				\item für Zeiträume $t_o, \dots, t_n$ und Zinssatz $i$ gilt $\kappa=\sum_{j=0}^n \frac{t_j}{(1+i)^j}$ \label{Kapitalwert}
+				\item bei geg. $RBF(i;T)$: $\kappa=RBF(i;T)\cdot z -A_0$, gleichbleibende Einzahlung $z$, Anfangsauszahlung $A_0$
+			\end{itemize}
+		
+		\item Differenzinvestition: $\kappa^{A-B}=\kappa_A - \kappa_B$
+		\item Zahlungsreihe einer Differenzinvestition (A-B): Für alle $t\in T$ berechne $z_t^{(A)}-z_t^{(B)}$ und anschließend den \hyperref[Kapitalwert]{Kapitalwert} \label{ZahlungsreiheEinerDifferenzinvestition}
+		\item Rentenbarwertaktor $RBF$:
+			\begin{itemize}
+				\item[Def.:] Der RBF entspricht dem Kaptialwert einer gleichbleibenden Einzahlung von genau 1 GE in den Zeitpunkten $t=1$ bis $t=T$
+				\item $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T\cdot i}$ für Zeitraum $t$ bis $T$ und Zinsfuß $i$ 
+				\item Berechnung des konst. Zahlungsüberschusses pro Periode: $z=\frac{\kappa + A_0}{RBF(i;T)}$
+			\end{itemize}
+		\item äquivalente Annuität:
+			\begin{itemize}
+				\item[Def.:] Welche gleichbleibende Einzahlung von t=1 bis t=T bei einem Kalkulationszinsfuß $i$ erforderlich ist um einen Kapitalwert $\kappa$ von genau 1 GE zu generieren.
+				\item $ANN(i;T)=\frac{1}{RBF(i;T)}$
+			\end{itemize}
+		\item Ertragswert $\eta_0$:
+			\begin{itemize}
+				\item[Def.:] Ertragswert $\eta_0$ entspricht dem Kapitalwert der Einzahlungsüberschüsse
+				\item $\eta_0=\kappa-A_0 = RBF(i;T)\cdot z $
+			\end{itemize}
+	\end{itemize}
+	\section{Dynexite Aufgaben}
+	\subsection*{Thema 1}
+%	\begin{enumerate}
+%		\setlength{\itemindent}{1cm}
+		\subsubsection*{Aufgabe 1}
+		\label{Thema1Aufgabe1} Vorgehen:
+		\begin{enumerate}
+			\setlength{\itemindent}{1cm}
+			\item berechne \hyperref[Rendite]{Renditen}$R_1,\dots, R_n$
+			\item sortiere absteigend nach Renditen: $(I_{max},I_{2max},\dots,I_{least})$
+			\item füge ein: $(R_{max}/100+1)*I$ für $0 < I \le \text{Investitionsvolumen}_{max}$
+			\item füge ein: $E_max + (R_{2max}/100+1)\cdot I$ für \\ $\text{Investitionsvolumen}_{max} < I \le \text{Investitionsvolumen}_{max}+\text{Investitionsvolumen}_{2max}$, etc 
+		\end{enumerate}
+		\subsubsection*{Aufgabe 2}
+		Ang. es schließen sich Projekt X und Y aus und $R_X>R_Y$. Vorgehen:
+		\begin{enumerate}
+			\setlength{\itemindent}{1cm}
+			\item Analog zu \hyperref[Thema1Aufgabe1]{Aufgabe 1} Punkte 1 und 2
+			\item Führe die Programme mit max. Renditen durch.
+			\item[\red{!Wichtig!}] wenn $I_Y>I_X$: berechne $\frac{E_X}{R_Y/100+1} =x$.
+				\begin{itemize}
+					\setlength{\itemindent}{2cm}
+					\item[$x>I_Y$:] nicht zu ändern
+					\item[sonst:] füge Zeile hinzu mit: ${\sum_{i\in\text{durchgef. Proj.}}E_i} + (\frac{I_Y}{100}+1)*(I-\sum_{i\in\text{durchgef. Proj.}}I_i)$
+				\end{itemize}
+		\end{enumerate}
+	\subsection*{Thema 2}
+		\subsubsection*{Aufgabe 1}\label{Thema2Aufgabe1}
+		Berechne die Kaptialwerte $\kappa_0, \dots, \kappa_n$ mit \hyperref[Kapitalwert]{dieser} Formel.
+		\begin{itemize}
+			\setlength{\itemindent}{1cm}
+			\item[$\kappa_i>0$] durchführen
+			\item[$\kappa_i =0$] indifferent
+			\item[$\kappa_i<0$] nicht durchführen
+		\end{itemize}
+		Bei ausschließenden Projekten führe dasjenige aus, welches den höheren Kapitalwert hat und führe dies durch g.d.w. dessen $\kappa>0$
+		\subsubsection*{Aufgabe 2}\label{Thema2Aufgabe2}
+		Erster Teil analog zu \hyperref[Thema2Aufgabe1]{Thema 2 Aufgabe 1}. \\
+		Berechne danach die \hyperref[ZahlungsreiheEinerDifferenzinvestition]{Zahlungsreihe einer geg. Differenzinvestition}
+		\subsubsection*{Aufgabe 3}
+		100\% analog zu \hyperref[Thema2Aufgabe2]{Thema 2 Aufgabe 2}. Unterschiede sind nur die Werte ($> 1000$).
+		
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

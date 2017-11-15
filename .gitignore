@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.aux
+Zusammenfassung.log
+*.out
+Zusammenfassung.synctex.gz
