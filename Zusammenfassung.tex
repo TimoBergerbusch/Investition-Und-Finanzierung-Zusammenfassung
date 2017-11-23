@@ -100,16 +100,16 @@
 		
 		\item Differenzinvestition: $\kappa^{A-B}=\kappa_A - \kappa_B$
 		\item Zahlungsreihe einer Differenzinvestition (A-B): Für alle $t\in T$ berechne $z_t^{(A)}-z_t^{(B)}$ und anschließend den \hyperref[Kapitalwert]{Kapitalwert} \label{ZahlungsreiheEinerDifferenzinvestition}
-		\item Rentenbarwertaktor $RBF$:
+		\item Rentenbarwertaktor $RBF$ \label{Rentenbarwertfaktor}:
 			\begin{itemize}
 				\item[Def.:] Der RBF entspricht dem Kaptialwert einer gleichbleibenden Einzahlung von genau 1 GE in den Zeitpunkten $t=1$ bis $t=T$
 				\item $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T\cdot i}$ für Zeitraum $t$ bis $T$ und Zinsfuß $i$ 
-				\item Berechnung des konst. Zahlungsüberschusses pro Periode: $z=\frac{\kappa + A_0}{RBF(i;T)}$
 			\end{itemize}
-		\item äquivalente Annuität:
+		\item Annuität:\label{Annuitaet}
 			\begin{itemize}
 				\item[Def.:] Welche gleichbleibende Einzahlung von t=1 bis t=T bei einem Kalkulationszinsfuß $i$ erforderlich ist um einen Kapitalwert $\kappa$ von genau 1 GE zu generieren.
-				\item $ANN(i;T)=\frac{1}{RBF(i;T)}$
+				\item Annuitätsfaktor = $ANN(i;T)=\frac{1}{RBF(i;T)}$ 
+				\item Berechnung des konst. Zahlungsüberschusses pro Periode/ Annuität: $z=\frac{\kappa + A_0}{RBF(i;T)}$
 			\end{itemize}
 		\item Ertragswert $\eta_0$:
 			\begin{itemize}
@@ -158,7 +158,40 @@
 		Berechne danach die \hyperref[ZahlungsreiheEinerDifferenzinvestition]{Zahlungsreihe einer geg. Differenzinvestition}
 		\subsubsection*{Aufgabe 3}
 		100\% analog zu \hyperref[Thema2Aufgabe2]{Thema 2 Aufgabe 2}. Unterschiede sind nur die Werte ($> 1000$).
-		
+	\subsection*{Thema 3}
+		\subsubsection*{Aufgabe 1}
+		\begin{enumerate}
+			\item Berechne den $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T*i}$, den Kapitalwert $\kappa=RBF(i;T)\cdot z -A_0$ und Ertragswert $\eta = \kappa + A_0$ ($z$ ist die gleichmäßige Entnahme)
+			\item Berechne den Annuitätenfaktor $ANN(i;T)=\frac{1}{RBF(i;T)}$ und Annuität $\frac{\eta-A_0}{RBF(i;T)} = \kappa\cdot ANN(i;T)$
+			\item Berechne die Annuitäten erneut nur nimm diesmal $ANN(i;T)$ des am längsten laufenden Projektes
+		\end{enumerate}
+		\subsubsection*{Aufgabe 2}
+		Gegeben $i, T, \kappa, \eta$
+		\begin{enumerate}[label=\alph*)]
+			\item Rechne $\kappa \cdot ANN(i;T)$
+			\item Rechne $ANN(i;T)$
+			\item Rechne $\eta*RBF(i;T)$
+		\end{enumerate}
+		\subsubsection*{Aufgabe 3} \label{Thema3Aufgabe3}
+		\begin{itemize}
+			\item[a)]
+			\item Abschreibung: bei linearer Abschreibung $D_t=A_0/T$
+			\item durchschnittliche Mittelbindung = $(2\cdot MB_{t-1}-D_t)/2$ \\
+			\textbf{Tipp}: fange bei $t=T$ an mit $\emptyset\text{-MB}_{t}=\frac{1}{2}D_t$ und rechne für $t=t-1$ einfach $\emptyset\text{-MB}_{t}=\emptyset\text{-MB}_{t-1}+D_t$
+			\item kalkulatorische Zinsen $kZ_t=i\cdot \emptyset\text{-MB}_t$
+			\item Periodengewinn $G_t=x_t*(p_t-k_{v,t})-k_{f,t}-D_t-kZ_t$
+			\item durchschnittlicher Periodengewinn $G_t^\prime=\frac{\sum_{t=1}^T G_t}{T}$
+			\item[b)]
+			\item $z_0=-A_0$ und $z_t=x_t*(p_t-k_{v,t})-k_{f,t}$
+			\item \hyperref[Kapitalwert]{Kapitalwert $\kappa$}, \hyperref[Annuitaet]{test $ANN(i;T)$} und \hyperref[Annuitaet]{Annuität} wie gewohnt
+		\end{itemize}
+	
+		\subsubsection*{Aufgabe 4}
+		\begin{enumerate}[label=\alph*)]
+			\item Gegeben sind eine Relation zwischen $K_{v,t}$ und $p_t$. Nutze diese um zwei Gleichungen mit Parametern $a$ und $b$ zu erhalten und löse das Gleichungssystem.
+			\item Nutze die Formel aus $a)$ für die ersten paar Lücken und berechne den Rest wie in \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
+			\item ebenfalls Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
+		\end{enumerate}
 \end{document}
 
 
