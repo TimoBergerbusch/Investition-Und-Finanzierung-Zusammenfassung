@@ -170,7 +170,7 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Rechne $\kappa \cdot ANN(i;T)$
 			\item Rechne $ANN(i;T)$
-			\item Rechne $\eta*RBF(i;T)$
+			\item Rechne $z*RBF(i;T)$
 		\end{enumerate}
 		\subsubsection*{Aufgabe 3} \label{Thema3Aufgabe3}
 		\begin{itemize}
@@ -183,7 +183,7 @@
 			\item durchschnittlicher Periodengewinn $G_t^\prime=\frac{\sum_{t=1}^T G_t}{T}$
 			\item[b)]
 			\item $z_0=-A_0$ und $z_t=x_t*(p_t-k_{v,t})-k_{f,t}$
-			\item \hyperref[Kapitalwert]{Kapitalwert $\kappa$}, \hyperref[Annuitaet]{test $ANN(i;T)$} und \hyperref[Annuitaet]{Annuität} wie gewohnt
+			\item \hyperref[Kapitalwert]{Kapitalwert $\kappa$}, \hyperref[Annuitaet]{$ANN(i;T)$} und \hyperref[Annuitaet]{Annuität} wie gewohnt
 		\end{itemize}
 	
 		\subsubsection*{Aufgabe 4}
@@ -191,6 +191,20 @@
 			\item Gegeben sind eine Relation zwischen $K_{v,t}$ und $p_t$. Nutze diese um zwei Gleichungen mit Parametern $a$ und $b$ zu erhalten und löse das Gleichungssystem.
 			\item Nutze die Formel aus $a)$ für die ersten paar Lücken und berechne den Rest wie in \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
 			\item ebenfalls Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
+		\end{enumerate}
+	
+		\subsubsection*{Aufgabe 5}
+		Einfaches Anwenden der Formeln des \hyperref[Rentenbarwertfaktor]{Rentenbarwertfaktors} und des \hyperref[Kapitalwert]{Kapitalwertes}.
+		
+		\subsection*{Thema 4}
+		\subsubsection*{Aufgabe 1}
+		Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3} außer, dass man nun eine Deckugnsbeitrag $db_t=(p_t*k_{p,t})$ hat und es keine $\emptyset$-MB$_t$ betrachtet wird sondern eine MB$_{t-1}$
+		
+		\subsubsection*{Aufgabe 2}
+		\begin{enumerate}[label=\alph*)]
+			\item Berechne die Tabelle intuitiv. Vertriebsgemeinkosten und Abschreibungen sind dabei Fixkosten.
+			\item $z_0^{A}=T\cdot \text{Abschreibungen}$ und $z_t^{(A)}=\text{Produkt-Deckungsbeitrag aus a)} + \text{Abschreibungen}$. Den \hyperref[Kapitalwert]{Kapitalwert} wie gehabt \underline{oder} berechne den $RBF(i;T) \cdot z_t^{(A)}- z_0^{(A)}$
+			\item Tabelle intuitiv. Die kalkulatorischen Zinsen sind dabei die Zinsen auf das gesamt gebundene Kapital. \underline{Beispiel}: Zinsfuß $i=10\%$, $T=4$ und Abschreibungen $A = 1000$ dann wäre die Zinsen zu den Perioden $(1,\dots,4) \rightarrow (400, 300, 200 , 100)$
 		\end{enumerate}
 \end{document}
 
