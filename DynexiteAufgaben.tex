@@ -1,0 +1,149 @@
+\section{Dynexite Aufgaben}
+	\subsection*{Thema 1}
+%	\begin{enumerate}
+%		\setlength{\itemindent}{1cm}
+		\subsubsection*{Aufgabe 1}
+		\label{Thema1Aufgabe1} Vorgehen:
+		\begin{enumerate}
+			\setlength{\itemindent}{1cm}
+			\item berechne \hyperref[Rendite]{Renditen}$R_1,\dots, R_n$
+			\item sortiere absteigend nach Renditen: $(I_{max},I_{2max},\dots,I_{least})$
+			\item füge ein: $(R_{max}/100+1)*I$ für $0 < I \le \text{Investitionsvolumen}_{max}$
+			\item füge ein: $E_max + (R_{2max}/100+1)\cdot I$ für \\ $\text{Investitionsvolumen}_{max} < I \le \text{Investitionsvolumen}_{max}+\text{Investitionsvolumen}_{2max}$, etc 
+		\end{enumerate}
+		\subsubsection*{Aufgabe 2}
+		Ang. es schließen sich Projekt X und Y aus und $R_X>R_Y$. Vorgehen:
+		\begin{enumerate}
+			\setlength{\itemindent}{1cm}
+			\item Analog zu \hyperref[Thema1Aufgabe1]{Aufgabe 1} Punkte 1 und 2
+			\item Führe die Programme mit max. Renditen durch.
+			\item[\red{!Wichtig!}] wenn $I_Y>I_X$: berechne $\frac{E_X}{R_Y/100+1} =x$.
+				\begin{itemize}
+					\setlength{\itemindent}{2cm}
+					\item[$x>I_Y$:] nicht zu ändern
+					\item[sonst:] füge Zeile hinzu mit: ${\sum_{i\in\text{durchgef. Proj.}}E_i} + (\frac{I_Y}{100}+1)*(I-\sum_{i\in\text{durchgef. Proj.}}I_i)$
+				\end{itemize}
+		\end{enumerate}
+	\subsection*{Thema 2}
+		\subsubsection*{Aufgabe 1}\label{Thema2Aufgabe1}
+		Berechne die Kaptialwerte $\kappa_0, \dots, \kappa_n$ mit \hyperref[Kapitalwert]{dieser} Formel.
+		\begin{itemize}
+			\setlength{\itemindent}{1cm}
+			\item[$\kappa_i>0$] durchführen
+			\item[$\kappa_i =0$] indifferent
+			\item[$\kappa_i<0$] nicht durchführen
+		\end{itemize}
+		Bei ausschließenden Projekten führe dasjenige aus, welches den höheren Kapitalwert hat und führe dies durch g.d.w. dessen $\kappa>0$
+		\subsubsection*{Aufgabe 2}\label{Thema2Aufgabe2}
+		Erster Teil analog zu \hyperref[Thema2Aufgabe1]{Thema 2 Aufgabe 1}. \\
+		Berechne danach die \hyperref[Differenzinvestition]{Zahlungsreihe einer geg. Differenzinvestition}
+		\subsubsection*{Aufgabe 3}
+		100\% analog zu \hyperref[Thema2Aufgabe2]{Thema 2 Aufgabe 2}. Unterschiede sind nur die Werte ($> 1000$).
+	\subsection*{Thema 3}
+		\subsubsection*{Aufgabe 1}
+		\begin{enumerate}
+			\item Berechne den $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T*i}$, den Kapitalwert $\kappa=RBF(i;T)\cdot z -A_0$ und Ertragswert $\eta = \kappa + A_0$ ($z$ ist die gleichmäßige Entnahme)
+			\item Berechne den Annuitätenfaktor $ANN(i;T)=\frac{1}{RBF(i;T)}$ und Annuität $\frac{\eta-A_0}{RBF(i;T)} = \kappa\cdot ANN(i;T)$
+			\item Berechne die Annuitäten erneut nur nimm diesmal $ANN(i;T)$ des am längsten laufenden Projektes
+		\end{enumerate}
+		\subsubsection*{Aufgabe 2}
+		Gegeben $i, T, \kappa, \eta$
+		\begin{enumerate}[label=\alph*)]
+			\item Rechne $\kappa \cdot ANN(i;T)$
+			\item Rechne $ANN(i;T)$
+			\item Rechne $z*RBF(i;T)$
+		\end{enumerate}
+		\subsubsection*{Aufgabe 3} \label{Thema3Aufgabe3}
+		\begin{itemize}
+			\item[a)]
+			\item Abschreibung: bei linearer Abschreibung $D_t=A_0/T$
+			\item durchschnittliche Mittelbindung = $(2\cdot MB_{t-1}-D_t)/2$ \\
+			\textbf{Tipp}: fange bei $t=T$ an mit $\emptyset\text{-MB}_{t}=\frac{1}{2}D_t$ und rechne für $t=t-1$ einfach $\emptyset\text{-MB}_{t}=\emptyset\text{-MB}_{t-1}+D_t$
+			\item kalkulatorische Zinsen $kZ_t=i\cdot \emptyset\text{-MB}_t$
+			\item Periodengewinn $G_t=x_t*(p_t-k_{v,t})-k_{f,t}-D_t-kZ_t$
+			\item durchschnittlicher Periodengewinn $G_t^\prime=\frac{\sum_{t=1}^T G_t}{T}$
+			\item[b)]
+			\item $z_0=-A_0$ und $z_t=x_t*(p_t-k_{v,t})-k_{f,t}$
+			\item \hyperref[Kapitalwert]{Kapitalwert $\kappa$}, \hyperref[Annuitaet]{$ANN(i;T)$} und \hyperref[Annuitaet]{Annuität} wie gewohnt
+		\end{itemize}
+	
+		\subsubsection*{Aufgabe 4}
+		\begin{enumerate}[label=\alph*)]
+			\item Gegeben sind eine Relation zwischen $K_{v,t}$ und $p_t$. Nutze diese um zwei Gleichungen mit Parametern $a$ und $b$ zu erhalten und löse das Gleichungssystem.
+			\item Nutze die Formel aus $a)$ für die ersten paar Lücken und berechne den Rest wie in \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
+			\item ebenfalls Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
+		\end{enumerate}
+	
+		\subsubsection*{Aufgabe 5}
+		Einfaches Anwenden der Formeln des \hyperref[Rentenbarwertfaktor]{Rentenbarwertfaktors} und des \hyperref[Kapitalwert]{Kapitalwertes}.
+		
+	\subsection*{Thema 4}
+		\subsubsection*{Aufgabe 1}
+		Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3} außer, dass man nun eine Deckugnsbeitrag $db_t=(p_t*k_{p,t})$ hat und es keine $\emptyset$-MB$_t$ betrachtet wird sondern eine MB$_{t-1}$
+		
+		\subsubsection*{Aufgabe 2}
+		\begin{enumerate}[label=\alph*)]
+			\item Berechne die Tabelle intuitiv. Vertriebsgemeinkosten und Abschreibungen sind dabei Fixkosten.
+			\item $z_0^{A}=T\cdot \text{Abschreibungen}$ und $z_t^{(A)}=\text{Produkt-Deckungsbeitrag aus a)} + \text{Abschreibungen}$. Den \hyperref[Kapitalwert]{Kapitalwert} wie gehabt \underline{oder} berechne den $RBF(i;T) \cdot z_t^{(A)}- z_0^{(A)}$
+			\item Tabelle intuitiv. Die kalkulatorischen Zinsen sind dabei die Zinsen auf das gesamt gebundene Kapital. \underline{Beispiel}: Zinsfuß $i=10\%$, $T=4$ und Abschreibungen $A = 1000$ dann wäre die Zinsen zu den Perioden $(1,\dots,4) \rightarrow (400, 300, 200 , 100)$
+		\end{enumerate}
+	\subsection*{Thema 5}
+	\subsubsection*{Aufgabe 1}
+	\begin{enumerate}[label=\alph*)]
+		\item Berechne den \hyperref[Kapitalwert]{Kapitalwert} wie immer
+		\item Berechne den \hyperref[Zinsfuss]{Zinsfuß}
+		\item Analog zu \hyperref[Thema2Aufgabe2]{Thema 2 Aufgabe 2} die \hyperref[Differenzinvestition]{Differenzinvestition}
+	\end{enumerate}
+
+	\subsubsection*{Aufgabe 2}
+	Berechne die \hyperref[Amortisationsdauer]{Amortisationsdauer $t_{krit}$} bei beiden Projekte a) und b) und vergleiche den \hyperref[Kapitalwert]{Kapitalwert} in c)
+	
+	\subsubsection*{Aufgabe 3}
+	\begin{enumerate}[label=\alph*)]
+		\item Berechne den \hyperref[Kapitalwert]{Kapitalwert $\kappa$} und den \hyperref[Zinsfuss]{Zinsfuß $i$}
+		\item Berechne erneut den \hyperref[Zinsfuss]{Zinsfuß $i$} und zusätzlich subtrahiere die anfallenden Kosten 
+	\end{enumerate}
+
+	\subsubsection*{Aufgabe 4}
+	Kurios
+	
+	\subsection*{Thema 6}
+	\subsubsection*{Aufgabe 1}
+	\begin{enumerate}[label=\alph*)]
+		\item Berechne die Tabelle nach dem folgenden Muster:\\
+			\begin{tabular}{|c|c|c|c|c|} \hline
+				t & 0 & 1 & 2 & 3 \\ \hline
+				$z_t$ & 0 & 0 & 0 & 1 \\
+				$\kappa^{(3)}, i_3$ & $x_{3,0}=\frac{-1}{1+i_3}$ \red{\footnotesize(2)}& $x_{3,0}\cdot -i_3$ \red{\footnotesize(3)}& $R_3=z_3-x_{3,0} \cdot -i_3$ \red{\footnotesize(3)}& -1 \red{\footnotesize(1)}\\
+				$\kappa^{(2)}, i_2$ & $x_{2,0}=\frac{R_2}{-(1+i_2)}$ \red{\footnotesize(5)}& $x_{2,0}\cdot -i_2$ \red{\footnotesize(6)}& $R_2=z_2-R_3$ \red{\footnotesize(4)}& 0 \\
+				$\kappa^{(1)}, i_1$ & $x_{1,0}=\frac{R_1}{-(1+i_1)}$ \red{\footnotesize(8)}& $R_1=z_1-R_3-R_2$ \red{\footnotesize(7)}& 0 & 0 \\
+				$\sum$ & $s_3=x_{3,0}+x_{2,0}+x_{1,0}$ \red{\footnotesize(9)}& 0 & 0 & 0\\\hline
+			\end{tabular}
+			
+			Dabei beschreiben \red{\footnotesize(1) }\normalsize bis \red{\footnotesize(9) }\normalsize die Reihenfolge der Berechnung.\\
+			Zu beachten ist, dass der Wert des "ersten" $x_{max,0}$ positiv ist und alle anderen $x_{i,0}$ negativ.
+			Somit sind alle Felder rechts von $x_{max,0}$ und unter $x_{max,0}$ negativ und alle anderen Felder positiv.\\
+			Ausnahme ist nur die letzte Zeile mit der Summe.\\
+			\green{Hinweis}: wenn die $z_t=0, \forall 0\le t\le T$ gilt, dann ist $R_t=-x_{t+1,0}$ für $t<T-1$.
+		\item berechne $v_t$ wie folgt: $v_t=\sqrt[t]{\frac{1}{s_t}}-1$		
+		\item berechne $i_t$ aufbauend nach dem folgenden Schema:
+			\begin{itemize}
+				\item $1+i_1=1+v_1$
+				\item $i_1 \cdot (1+i_2)=(1+v_2)^2$
+				\item $i_1\cdot i_2 \cdot (1+i_3)=(1+v_3)^3$
+				\item[] \dots
+				\item[$\Rightarrow$] für $i_t \Rightarrow \prod_{j=1}^{t-1}i_j \cdot(1+i_t)=(1+v_t)^t$
+			\end{itemize}
+		Der Kapitalwert folgt dann mittels: $z_0+\sum_{t=1}^{T} \frac{z_t}{\prod_{j=1}^{t} v_j}$, also $z_0 + \frac{z_1}{i_1}+ \frac{z_2}{i_1\cdot i_2}+\dots$
+		\item analog zu a) allerdings wechseln alle Zellen das Vorzeichen.
+	\end{enumerate}
+	
+	\subsubsection*{Aufgabe 2}
+	\begin{enumerate}[label=\alph*)]
+		\item $\kappa= z_0 + \frac{z_1}{i_1} + \frac{z_2}{{i_2}^2} + \dots$
+		\item \hyperref[EinPeriodenzinssatz]{Ein-Periondenzinssatz}Löse $(1+i_1)\cdot (1+i_2^\prime)  \overset{!}{=} (1+i_2)^2$ bei geg. $i_1$ nach $i_2^\prime$
+		\item \hyperref[ZeroBondAbzinsungsfaktor]{Zero-Bond-Abzinsungfaktor} $d_t=\frac{1}{(i_t)^t}$
+		\item Preis des Portfolio: $\frac{z_1}{i_1}+\frac{z_2}{(i_2)^2}$ 
+	\end{enumerate}
+	
+	

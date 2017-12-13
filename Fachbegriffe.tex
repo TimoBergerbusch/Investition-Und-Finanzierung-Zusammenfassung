@@ -1,0 +1,141 @@
+\section{Fachbegriffe}
+	\begin{itemize}
+		\item Amortisationsdauer $t_{krit}$: \label{Amortisationsdauer}
+			\begin{itemize}
+				\item[Def.:] Der Zeitpunkt $t$ indem der \hyperref[Kapitalwert]{Kapitalwert $\kappa$} zum ersten mal positiv wird
+				\item Berechne $\kappa_t$ für jeden Zeipunkt $t$ bis $\kappa_t >0$
+			\end{itemize}
+		\item Annuität:\label{Annuitaet}
+			\begin{itemize}
+				\item[Def.:] Welche gleichbleibende Einzahlung von t=1 bis t=T bei einem Kalkulationszinsfuß $i$ erforderlich ist um einen Kapitalwert $\kappa$ von genau 1 GE zu generieren.
+				\item Annuitätsfaktor = $ANN(i;T)=\frac{1}{\hyperref[Rentenbarwertfaktor]{RBF(i;T)}}$ 
+				\item Berechnung des konst. Zahlungsüberschusses pro Periode/ Annuität: $z=\frac{\kappa + A_0}{RBF(i;T)}$
+			\end{itemize}
+		\item Differenzinvestition\label{Differenzinvestition}: $\kappa^{A-B}=\kappa_A - \kappa_B$
+			\item Ertragswert $\eta_0$:
+			\begin{itemize}
+				\item[Def.:] Ertragswert $\eta_0$ entspricht dem Kapitalwert der Einzahlungsüberschüsse
+				\item $\eta_0=\kappa-A_0 = RBF(i;T)\cdot z $
+			\end{itemize}
+		\item Fisher-Separation\label{Fisher-Separation}:\\
+			\begin{enumerate}
+				\item Trennung von Real-und Finanzinvestition
+				\item Realinvestitionsentscheidung wird getrennt von Präferenzen und Anfangsausstattung $W_0$
+			\end{enumerate}
+		\item Grenzrate der Substitution GRS: \label{GRS}
+			\begin{itemize}
+				\item Steigung der \hyperref[Nutzenindifferenzkurve]{Nutzenindifferenzkurve}
+				\item Verzicht auf wie viele Einheiten Zukunftskonsum für eine Einheit im jetzt
+			\end{itemize}
+		\item Grenzrate der Transformation GRT: \label{GRT}
+			\begin{itemize}
+				\item Steigung der Transformationskurve
+				\item Rückgang der Einheiten des Zukunftskonsums bei Erhöhung der Einheiten im jetzt um 1
+			\end{itemize}
+		\item Grenzrendite \label{Grenzrendite}\\ %TODO
+		\item Indifferenzkurve:
+			\begin{itemize}
+				\item[Def.:] eine Kurve im $(C_0;C_1)$-Diagramm für die ein Entscheider keinen unterschied zwischen dem $C_0$ Konsum jetzt oder dem $C_1$ Konsum in $t_1$ macht
+				\item bei geg. Nutzenfunktion $\overline{U}=C_0^x\cdot C_1^y \Leftrightarrow C_1 = \overline{U}^{\frac{1}{y}}\cdot C_0^{-\frac{x}{y}} $
+			\end{itemize}		
+		\item Investitionsertragsfunktion $F(I)$: Herleitung wie in \hyperref[Thema1Aufgabe1]{Thema 1 Aufgabe 1} \label{Investitionsertragsfunktion}\\
+			Verfügt über 3 Eigenschaften: \begin{enumerate}
+				\item $F(0)=0$\\ Kein Ertrag bei einem Investitionsvolumen von 0
+				\item $F'(I) >0$ für $I>0$\\ im Falle einer Investition ist der Grenzertrag immer positiv
+				\item $F''(I) <0$ für $I>0$\\ abnehmender Grenznutzen (degressiv); Rentabilität nimmt ab
+			\end{enumerate}
+		\item Kapitalmarktgerade: \label{Kapitalmarktgerade}
+			\begin{itemize}
+				\item[Def.:] geometrischer Ort aller $(C_0,C_1)$-Kombinationen, die durch Kapitalmarkttransaktionen erreicht werden können
+				\item weiter außer $\Rightarrow$ höherer Konsum in $t_0, t_1$
+				\item Verschiebung der Geraden $\Leftrightarrow$ Realinvestitionen
+				\item Bewegung auf der Geraden $\Leftrightarrow$ Finanzinvestitionen
+			\end{itemize}
+		\item Kapitalwert $\kappa$: 
+			\begin{itemize}
+				\item für Zeiträume $t_o, \dots, t_n$ und Zinssatz $i$ gilt $\kappa=\sum_{j=0}^n \frac{t_j}{(1+i)^j}$ \label{Kapitalwert}
+				\item bei geg. $RBF(i;T)$: $\kappa=RBF(i;T)\cdot z -A_0$, gleichbleibende Einzahlung $z$, Anfangsauszahlung $A_0$
+			\end{itemize}
+		\item Ketteneffekt: \label{Ketteneffekt}
+			Bei zunehmender Anzahl von Projektwiederholungen löst man die Projekte immer früher ab, da jedes Jahr verlängerter Nutzung zu einer einjährigen Verzögerung des durch die nächsten Durchführungen erreichbaren Vermögenszuwachses führt. Durch die Berücksichtigung der durch Verschiebung der späteren Projekte verursachten Reichtumseinbuße kommt es also zu einer Verkürzung der Projektnutzungsdauer.
+		\item Normalinvestition: \label{Normalinvestition}\\
+			besitzen nur einen Vorzeichenwechsel in der Zahlungsreihe
+		\item Nutzenindifferenzkurve: \label{Nutzenindifferenzkurve}\\
+			geometrischer Ort alle $(C_0,C_1)$-Kombinationen für die man Indifferent ist bzgl. des Nutzenwertes
+		\item optimales Investitionsvolumen: \\
+			Kriterium: Steigung Transformationskurve $-F'(I) = -(1+i)$ Steigung Kapitalmarkt-gerade\\
+			$\max U(C_0;C_1)$ unter der NB $C_1=F(W_0-C_0)$
+			\begin{enumerate}
+				\item einsetzen von $C_1$
+				\item ableiten mittels $\frac{\partial U}{\partial C_0}$
+				\item lösen nach $C_0$
+			\end{enumerate}		
+		\item Rendite: $\frac{\text{Ertrag}\cdot100}{\text{Investition}}-1$\label{Rendite}
+		\item Rentenbarwertaktor $RBF$ \label{Rentenbarwertfaktor}:
+			\begin{itemize}
+				\item[Def.:] Der RBF entspricht dem Kapitalwert einer gleichbleibenden Einzahlung von genau 1 GE in den Zeitpunkten $t=1$ bis $t=T$
+				\item $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T\cdot i}$ für Zeitraum $t$ bis $T$ und Zinsfuß $i$ 
+			\end{itemize}	
+		\item Steuerparadoxon: \label{Steuerparadoxon}\\
+			\begin{itemize}
+				\item[Def.:] Der \hyperref[Kapitalwert]{Kapitalwert} vor Steuern ist geringer als der Gewinn nach Steuern
+				\item[Beg.:] Der negative \hyperref[Volumeneffekt]{Volumeneffekt} wird vom positiven \hyperref[Zinseffekt]{Zinseffekt} überkompensiert
+			\end{itemize}			
+		\item Tangentialpunkt: \hyperref[Nutzenindifferenzkurve]{Nutzenindifferenzkurve} und \hyperref[Transformationskurve]{Transformationskurve} \label{TangNutzUndTrans} \\
+			\begin{itemize}
+				\item beschreibt optimales Investitionsprogramm
+				\item an diesem Punkt gilt: \hyperref[GRS]{GRS} = \hyperref[GRT]{GRT}
+			\end{itemize}
+		\item Tangentialpunkt: \hyperref[Transformationskurve]{Transformationskurve} und \hyperref[Kapitalmarktgerade]{Kapitalmarkgerade} \label{TangTransUndKap} 
+			\begin{itemize}
+				\item in diesem Punkt gilt: \hyperref[Zinsfuss]{Kapitalmarktzins} = \hyperref[Grenzrendite]{Grenzrendite}
+			\end{itemize}
+		\item Transformationsfunktion \label{Transformationskurve}\label{Transformationsfunktion}
+			\begin{itemize}
+				\item[Def.:] geometrischer Ort aller Komb. aus gegnwärtigem und zukünftigem Konsum die ein Unternehmer mit einer Anfangsaustattung mittels Realinvestitionen erreichen kann.
+				\item nach links gespiegelte \hyperref[Investitionsertragsfunktion]{Investitionsertragsfunktion}
+				\item[Formel:] $C_1=F(W_0-C_0)$		
+			\end{itemize}  
+		\item Vollkommener Kapitalmarkt \label{VollkommenerKapitalmarkt} \\
+			Der Markt ist vollkommen, wenn:
+			\begin{enumerate}
+				\item alle Marktteilnehmer rational
+				\item gegebene unbeeinflussbare Zinssätze
+				\item keine Kosten für Informationsbeschaffung und - verarbeitung
+			\end{enumerate}
+			$\Rightarrow$ Sollzins = Habenzins
+		\item Volumeneffekt: \label{Volumeneffekt}\\
+			Reduktion von Zahlungen durch Steuern
+		\item Wertadditivität: \label{Wertadditivitaet}
+			$\kappa^{(1+2)}=\kappa^{(1)}+\kappa^{(2)} $
+		\item Zahlungsreihe einer Differenzinvestition (A-B): Für alle $t\in T$ berechne $z_t^{(A)}-z_t^{(B)}$ und anschließend den \hyperref[Kapitalwert]{Kapitalwert}
+		\item Zero-Bond \label{ZeroBond}
+			\begin{itemize}
+				\setlength{\itemindent}{1cm}
+				\item[Def.:] Anlage- bzw. Berschuldung die nur in einem Zeitpunkt Zahlungskonsequenzen hat
+				\item[Intuition:] Wie hoch Kredit aufnehmen um einen genau def. Betrag zurückzahlen zu müssen?
+			\end{itemize}
+		\item Zero-Bond-Abzinsungsfaktor $d_t$ \label{ZeroBondAbzinsungsfaktor}
+			\begin{itemize}
+				\setlength{\itemindent}{1cm}
+				\item[Def.:] standardisierter Zero Bond mit Zahlungsversprechen von 1 GE am Ende der Laufzeit
+				\item[Formel:] $d_t = \frac{Preis}{Kaptialwert}$ für ein normiertes \hyperref[ZeroBond]{Zero-Bond} im Zeitpunkt $t_0$ mit Fälligkeit in $T$
+				\item[Intuition:] Zero-Bond-Abzinsungsfaktor als Kredithöhe in $t_0$ zu verstehen, der eine Rückzahlung von 1GE in $T$ folgt
+			\end{itemize}
+		\item Zinseffekt: \label{Zinseffekt}
+			\begin{itemize}
+				\item Multiplikation von Diskontierungsfaktor mit Steuerfaktor
+				\item[$\Rightarrow$] geringerer Abdiskontierungsfaktor als vor Steuern
+				\item[$\Rightarrow$] steigender \hyperref[Kapitalwert]{Kapitalwert}
+			\end{itemize}
+		\item Zinsfuß $i$: \label{Zinsfuss}
+			\begin{itemize}
+				\item Berechnung: Löse $0 \stackrel{!}{=} -A_0 + \sum_{j=0}^T \frac{\text{Ertrag in }t_j}{(1+i)^j}$ nach $i$
+			\end{itemize}
+		\item Zinsstruktur \label{Zinsstruktur}
+			\begin{itemize}
+				\setlength{\itemindent}{1cm}
+				\item[Normal:] Steigende Zinssätze pro Periode mit verlängerter Laufzeit
+				\item[Inverse:] Sinkende Zinssätze pro Periode mit verlängerter Laufzeit
+			\end{itemize}
+	\end{itemize}

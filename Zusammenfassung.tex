@@ -39,8 +39,8 @@
 \usepackage{datetime}
 \usepackage{hyperref}
 \newdateformat{specialdate}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
-
 \newcommand{\red}[1]{\color{red}#1\color{black}}
+\newcommand{\green}[1]{\color{green!50!black}#1\color{black}}
 
 \begin{document}
 	
@@ -69,143 +69,10 @@
 			\end{itemize}
 	\end{enumerate}
 	
-	\section{Fachbegriffe}
-	\begin{itemize}
-		\item Investitionsertragsfunktion $F(I)$: Herleitung wie in \hyperref[Thema1Aufgabe1]{Thema 1 Aufgabe 1} \\
-			Verfügt über 3 Eigenschaften: \begin{enumerate}
-				\item $F(0)=0$
-				\item positiver Ertrag: $F'(I) >0$ für $I>0$
-				\item abnehmender Grenznutzen (degressiv): $F''(I) <0$ für $I>0$
-			\end{enumerate}
-		\item Rendite: $\frac{\text{Ertrag}\cdot100}{\text{Investition}}-1$\label{Rendite}
-		\item Transformationsfunktion:  $C_1=F(W_0-C_0)$
-		\item optimales Investitionsvolumen: \\
-			\textbf{Kriterium}: Steigung Transformationskurve $-F'(I) = -(1+i)$ Steigung Kapitalmarkt-gerade\\
-			$\max U(C_0;C_1)$ unter der NB $C_1=F(W_0-C_0)$
-			\begin{enumerate}
-				\item einsetzen von $C_1$
-				\item ableiten mittels $\frac{\partial U}{\partial C_0}$
-				\item lösen nach $C_0$
-			\end{enumerate}
-		\item Indifferenzkurve:
-			\begin{itemize}
-				\item[Def.:] eine Kurve im $(C_0;C_1)$-Diagramm für die ein Entscheider keinen unterschied zwischen dem $C_0$ Konsum jetzt oder dem $C_1$ Konsum in $t_1$ macht
-				\item bei geg. Nutzenfunktion $\overline{U}=C_0^x\cdot C_1^y \Leftrightarrow C_1 = \overline{U}^{\frac{1}{y}}\cdot C_0^{-\frac{x}{y}} $
-			\end{itemize}
-		\item Kapitalwert $\kappa$: 
-			\begin{itemize}
-				\item für Zeiträume $t_o, \dots, t_n$ und Zinssatz $i$ gilt $\kappa=\sum_{j=0}^n \frac{t_j}{(1+i)^j}$ \label{Kapitalwert}
-				\item bei geg. $RBF(i;T)$: $\kappa=RBF(i;T)\cdot z -A_0$, gleichbleibende Einzahlung $z$, Anfangsauszahlung $A_0$
-			\end{itemize}
-		
-		\item Differenzinvestition: $\kappa^{A-B}=\kappa_A - \kappa_B$
-		\item Zahlungsreihe einer Differenzinvestition (A-B): Für alle $t\in T$ berechne $z_t^{(A)}-z_t^{(B)}$ und anschließend den \hyperref[Kapitalwert]{Kapitalwert} \label{ZahlungsreiheEinerDifferenzinvestition}
-		\item Rentenbarwertaktor $RBF$ \label{Rentenbarwertfaktor}:
-			\begin{itemize}
-				\item[Def.:] Der RBF entspricht dem Kaptialwert einer gleichbleibenden Einzahlung von genau 1 GE in den Zeitpunkten $t=1$ bis $t=T$
-				\item $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T\cdot i}$ für Zeitraum $t$ bis $T$ und Zinsfuß $i$ 
-			\end{itemize}
-		\item Annuität:\label{Annuitaet}
-			\begin{itemize}
-				\item[Def.:] Welche gleichbleibende Einzahlung von t=1 bis t=T bei einem Kalkulationszinsfuß $i$ erforderlich ist um einen Kapitalwert $\kappa$ von genau 1 GE zu generieren.
-				\item Annuitätsfaktor = $ANN(i;T)=\frac{1}{RBF(i;T)}$ 
-				\item Berechnung des konst. Zahlungsüberschusses pro Periode/ Annuität: $z=\frac{\kappa + A_0}{RBF(i;T)}$
-			\end{itemize}
-		\item Ertragswert $\eta_0$:
-			\begin{itemize}
-				\item[Def.:] Ertragswert $\eta_0$ entspricht dem Kapitalwert der Einzahlungsüberschüsse
-				\item $\eta_0=\kappa-A_0 = RBF(i;T)\cdot z $
-			\end{itemize}
-	\end{itemize}
-	\section{Dynexite Aufgaben}
-	\subsection*{Thema 1}
-%	\begin{enumerate}
-%		\setlength{\itemindent}{1cm}
-		\subsubsection*{Aufgabe 1}
-		\label{Thema1Aufgabe1} Vorgehen:
-		\begin{enumerate}
-			\setlength{\itemindent}{1cm}
-			\item berechne \hyperref[Rendite]{Renditen}$R_1,\dots, R_n$
-			\item sortiere absteigend nach Renditen: $(I_{max},I_{2max},\dots,I_{least})$
-			\item füge ein: $(R_{max}/100+1)*I$ für $0 < I \le \text{Investitionsvolumen}_{max}$
-			\item füge ein: $E_max + (R_{2max}/100+1)\cdot I$ für \\ $\text{Investitionsvolumen}_{max} < I \le \text{Investitionsvolumen}_{max}+\text{Investitionsvolumen}_{2max}$, etc 
-		\end{enumerate}
-		\subsubsection*{Aufgabe 2}
-		Ang. es schließen sich Projekt X und Y aus und $R_X>R_Y$. Vorgehen:
-		\begin{enumerate}
-			\setlength{\itemindent}{1cm}
-			\item Analog zu \hyperref[Thema1Aufgabe1]{Aufgabe 1} Punkte 1 und 2
-			\item Führe die Programme mit max. Renditen durch.
-			\item[\red{!Wichtig!}] wenn $I_Y>I_X$: berechne $\frac{E_X}{R_Y/100+1} =x$.
-				\begin{itemize}
-					\setlength{\itemindent}{2cm}
-					\item[$x>I_Y$:] nicht zu ändern
-					\item[sonst:] füge Zeile hinzu mit: ${\sum_{i\in\text{durchgef. Proj.}}E_i} + (\frac{I_Y}{100}+1)*(I-\sum_{i\in\text{durchgef. Proj.}}I_i)$
-				\end{itemize}
-		\end{enumerate}
-	\subsection*{Thema 2}
-		\subsubsection*{Aufgabe 1}\label{Thema2Aufgabe1}
-		Berechne die Kaptialwerte $\kappa_0, \dots, \kappa_n$ mit \hyperref[Kapitalwert]{dieser} Formel.
-		\begin{itemize}
-			\setlength{\itemindent}{1cm}
-			\item[$\kappa_i>0$] durchführen
-			\item[$\kappa_i =0$] indifferent
-			\item[$\kappa_i<0$] nicht durchführen
-		\end{itemize}
-		Bei ausschließenden Projekten führe dasjenige aus, welches den höheren Kapitalwert hat und führe dies durch g.d.w. dessen $\kappa>0$
-		\subsubsection*{Aufgabe 2}\label{Thema2Aufgabe2}
-		Erster Teil analog zu \hyperref[Thema2Aufgabe1]{Thema 2 Aufgabe 1}. \\
-		Berechne danach die \hyperref[ZahlungsreiheEinerDifferenzinvestition]{Zahlungsreihe einer geg. Differenzinvestition}
-		\subsubsection*{Aufgabe 3}
-		100\% analog zu \hyperref[Thema2Aufgabe2]{Thema 2 Aufgabe 2}. Unterschiede sind nur die Werte ($> 1000$).
-	\subsection*{Thema 3}
-		\subsubsection*{Aufgabe 1}
-		\begin{enumerate}
-			\item Berechne den $RBF(i;T)=\frac{(1+i)^T-1}{(1+i)^T*i}$, den Kapitalwert $\kappa=RBF(i;T)\cdot z -A_0$ und Ertragswert $\eta = \kappa + A_0$ ($z$ ist die gleichmäßige Entnahme)
-			\item Berechne den Annuitätenfaktor $ANN(i;T)=\frac{1}{RBF(i;T)}$ und Annuität $\frac{\eta-A_0}{RBF(i;T)} = \kappa\cdot ANN(i;T)$
-			\item Berechne die Annuitäten erneut nur nimm diesmal $ANN(i;T)$ des am längsten laufenden Projektes
-		\end{enumerate}
-		\subsubsection*{Aufgabe 2}
-		Gegeben $i, T, \kappa, \eta$
-		\begin{enumerate}[label=\alph*)]
-			\item Rechne $\kappa \cdot ANN(i;T)$
-			\item Rechne $ANN(i;T)$
-			\item Rechne $z*RBF(i;T)$
-		\end{enumerate}
-		\subsubsection*{Aufgabe 3} \label{Thema3Aufgabe3}
-		\begin{itemize}
-			\item[a)]
-			\item Abschreibung: bei linearer Abschreibung $D_t=A_0/T$
-			\item durchschnittliche Mittelbindung = $(2\cdot MB_{t-1}-D_t)/2$ \\
-			\textbf{Tipp}: fange bei $t=T$ an mit $\emptyset\text{-MB}_{t}=\frac{1}{2}D_t$ und rechne für $t=t-1$ einfach $\emptyset\text{-MB}_{t}=\emptyset\text{-MB}_{t-1}+D_t$
-			\item kalkulatorische Zinsen $kZ_t=i\cdot \emptyset\text{-MB}_t$
-			\item Periodengewinn $G_t=x_t*(p_t-k_{v,t})-k_{f,t}-D_t-kZ_t$
-			\item durchschnittlicher Periodengewinn $G_t^\prime=\frac{\sum_{t=1}^T G_t}{T}$
-			\item[b)]
-			\item $z_0=-A_0$ und $z_t=x_t*(p_t-k_{v,t})-k_{f,t}$
-			\item \hyperref[Kapitalwert]{Kapitalwert $\kappa$}, \hyperref[Annuitaet]{$ANN(i;T)$} und \hyperref[Annuitaet]{Annuität} wie gewohnt
-		\end{itemize}
+	\include{Fachbegriffe}
 	
-		\subsubsection*{Aufgabe 4}
-		\begin{enumerate}[label=\alph*)]
-			\item Gegeben sind eine Relation zwischen $K_{v,t}$ und $p_t$. Nutze diese um zwei Gleichungen mit Parametern $a$ und $b$ zu erhalten und löse das Gleichungssystem.
-			\item Nutze die Formel aus $a)$ für die ersten paar Lücken und berechne den Rest wie in \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
-			\item ebenfalls Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3}
-		\end{enumerate}
+	\include{DynexiteAufgaben}
 	
-		\subsubsection*{Aufgabe 5}
-		Einfaches Anwenden der Formeln des \hyperref[Rentenbarwertfaktor]{Rentenbarwertfaktors} und des \hyperref[Kapitalwert]{Kapitalwertes}.
-		
-		\subsection*{Thema 4}
-		\subsubsection*{Aufgabe 1}
-		Analog zu \hyperref[Thema3Aufgabe3]{Thema 3 Aufgabe 3} außer, dass man nun eine Deckugnsbeitrag $db_t=(p_t*k_{p,t})$ hat und es keine $\emptyset$-MB$_t$ betrachtet wird sondern eine MB$_{t-1}$
-		
-		\subsubsection*{Aufgabe 2}
-		\begin{enumerate}[label=\alph*)]
-			\item Berechne die Tabelle intuitiv. Vertriebsgemeinkosten und Abschreibungen sind dabei Fixkosten.
-			\item $z_0^{A}=T\cdot \text{Abschreibungen}$ und $z_t^{(A)}=\text{Produkt-Deckungsbeitrag aus a)} + \text{Abschreibungen}$. Den \hyperref[Kapitalwert]{Kapitalwert} wie gehabt \underline{oder} berechne den $RBF(i;T) \cdot z_t^{(A)}- z_0^{(A)}$
-			\item Tabelle intuitiv. Die kalkulatorischen Zinsen sind dabei die Zinsen auf das gesamt gebundene Kapital. \underline{Beispiel}: Zinsfuß $i=10\%$, $T=4$ und Abschreibungen $A = 1000$ dann wäre die Zinsen zu den Perioden $(1,\dots,4) \rightarrow (400, 300, 200 , 100)$
-		\end{enumerate}
 \end{document}
 
 
