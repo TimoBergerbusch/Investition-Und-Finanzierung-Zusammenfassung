@@ -114,10 +114,10 @@
 			\begin{tabular}{|c|c|c|c|c|} \hline
 				t & 0 & 1 & 2 & 3 \\ \hline
 				$z_t$ & 0 & 0 & 0 & 1 \\
-				$\kappa^{(3)}, i_3$ & $x_{3,0}=\frac{-1}{1+i_3}$ \red{\footnotesize(2)}& $x_{3,0}\cdot -i_3$ \red{\footnotesize(3)}& $R_3=z_3-x_{3,0} \cdot -i_3$ \red{\footnotesize(3)}& -1 \red{\footnotesize(1)}\\
-				$\kappa^{(2)}, i_2$ & $x_{2,0}=\frac{R_2}{-(1+i_2)}$ \red{\footnotesize(5)}& $x_{2,0}\cdot -i_2$ \red{\footnotesize(6)}& $R_2=z_2-R_3$ \red{\footnotesize(4)}& 0 \\
-				$\kappa^{(1)}, i_1$ & $x_{1,0}=\frac{R_1}{-(1+i_1)}$ \red{\footnotesize(8)}& $R_1=z_1-R_3-R_2$ \red{\footnotesize(7)}& 0 & 0 \\
-				$\sum$ & $s_3=x_{3,0}+x_{2,0}+x_{1,0}$ \red{\footnotesize(9)}& 0 & 0 & 0\\\hline
+				$\kappa^{(3)}, i_3$ & $x_{3,0}=\frac{-R_3}{1+i_3}$ \red{\footnotesize(2)}& $x_{3,0}\cdot -i_3$ \red{\footnotesize(3)}& $x_{3,0} \cdot -i_3$ \red{\footnotesize(3)}& $R_3=-1$ \red{\footnotesize(1)}\\
+				$\kappa^{(2)}, i_2$ & $x_{2,0}=\frac{-R_2}{-(1+i_2)}$ \red{\footnotesize(5)}& $x_{2,0}\cdot -i_2$ \red{\footnotesize(6)}& $R_2=z_2+(3)$ \red{\footnotesize(4)}& 0 \\
+				$\kappa^{(1)}, i_1$ & $x_{1,0}=\frac{-R_1}{-(1+i_1)}$ \red{\footnotesize(8)}& $R_1=z_1+(3)+(6)$ \red{\footnotesize(7)}& 0 & 0 \\
+				$\sum$ & $s_3=z_0+x_{3,0}+x_{2,0}+x_{1,0}$ \red{\footnotesize(9)}& 0 & 0 & 0\\\hline
 			\end{tabular}
 			
 			Dabei beschreiben \red{\footnotesize(1) }\normalsize bis \red{\footnotesize(9) }\normalsize die Reihenfolge der Berechnung.\\
@@ -140,10 +140,42 @@
 	
 	\subsubsection*{Aufgabe 2}
 	\begin{enumerate}[label=\alph*)]
-		\item $\kappa= z_0 + \frac{z_1}{i_1} + \frac{z_2}{{i_2}^2} + \dots$
+		\item $\kappa= z_0 + \frac{z_1}{1+i_1} + \frac{z_2}{{1+i_2}^2} + \dots$
 		\item \hyperref[EinPeriodenzinssatz]{Ein-Periondenzinssatz}Löse $(1+i_1)\cdot (1+i_2^\prime)  \overset{!}{=} (1+i_2)^2$ bei geg. $i_1$ nach $i_2^\prime$
-		\item \hyperref[ZeroBondAbzinsungsfaktor]{Zero-Bond-Abzinsungfaktor} $d_t=\frac{1}{(i_t)^t}$
-		\item Preis des Portfolio: $\frac{z_1}{i_1}+\frac{z_2}{(i_2)^2}$ 
+		\item \hyperref[ZeroBondAbzinsungsfaktor]{Zero-Bond-Abzinsungfaktor} $d_t=\frac{1}{(1+i_t)^t}$
+		\item Preis des Portfolio: $\frac{z_1}{1+i_1}+\frac{z_2}{(1+i_2)^2} \dots$ 
+	\end{enumerate}
+
+	\subsection*{Thema 7}
+	\subsubsection*{Aufgabe 1}
+	\begin{enumerate}[label=\alph*)]
+		\item \begin{enumerate}
+				\item $p_t=p(x_t)$ wobei $p(x)$ eine geg. Preis-Absatz-Funktion ist
+				\item $z_t^\prime=x_t\cdot p_t$
+				\item $z_t=z_t^\prime-y_t$
+			\end{enumerate} 
+			und \\
+			\begin{figure}[H]
+				\centering
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					\textbf{T}  & \textbf{0} & \textbf{1} & \textbf{2}  & \textbf{3}\\ \hline
+					0          & 0.00 GE     &             &            &   \\
+					1          & $-A_0$     & $z_1 + L_1$ &            &  \\			
+					2          & $-A_0$     & $z_1$       & $z_2 + L_2$&  \\			
+					3          & $-A_0$     & $z_1$       & $z_2$& $z_3+L_3$ \\
+					\hline
+				\end{tabular}
+			\end{figure}
+		\item \hyperref[Kapitalwert]{Kapitalwert} beispielhaft:\\
+		$\kappa_0=0$, für $t=0$\\
+		$\kappa_1=-a_0 + \frac{z_1+L_1}{1+i}$, für $t=1$ \\ $\kappa_3=-A_0+\frac{z_1}{1+i}+\frac{z_2}{(1+i)^2}+\frac{z_3+L_3}{(1+i)^3}$, für $t=3$
+		\item \begin{itemize}
+				\item \hyperref[Rentenbarwertfaktor]{Renterbarwertfaktor} wie gehabt
+				\item $\kappa_t$ aus a)
+				\item \hyperref[Annuitaet]{Annuität} wie gehabt: $\text{Annuitaet}_t = RBF(i;T)^{-1}\cdot \kappa_t$
+				\item wähle $t^\star$ mit max. $t^\star= \max_{t\in T} \kappa_t$
+			\end{itemize}
 	\end{enumerate}
 	
 	
