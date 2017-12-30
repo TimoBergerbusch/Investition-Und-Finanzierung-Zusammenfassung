@@ -167,14 +167,21 @@
 					\hline
 				\end{tabular}
 			\end{figure}
-		\item \hyperref[Kapitalwert]{Kapitalwert} beispielhaft:\\
+		\item \textbf{bis zum Ende der techn. Nutzungsdauer} \\ \hyperref[Kapitalwert]{Kapitalwert} beispielhaft:\\
 		$\kappa_0=0$, für $t=0$\\
 		$\kappa_1=-a_0 + \frac{z_1+L_1}{1+i}$, für $t=1$ \\ $\kappa_3=-A_0+\frac{z_1}{1+i}+\frac{z_2}{(1+i)^2}+\frac{z_3+L_3}{(1+i)^3}$, für $t=3$
-		\item \begin{itemize}
+		\item \textbf{unendliche oft identisch ersetzt}
+			\begin{itemize}
 				\item \hyperref[Rentenbarwertfaktor]{Renterbarwertfaktor} wie gehabt
 				\item $\kappa_t$ aus a)
 				\item \hyperref[Annuitaet]{Annuität} wie gehabt: $\text{Annuitaet}_t = RBF(i;T)^{-1}\cdot \kappa_t$
-				\item wähle $t^\star$ mit max. $t^\star= \max_{t\in T} \kappa_t$
+				\item wähle $t^\star$ mit max. $t^\star= \max_{t\in T} \text{Annuitaet}_t$
+			\end{itemize}
+		\item \textbf{einmal identisch erstetzt}
+			\begin{itemize}
+				\item Berechne die \hyperref[Kapitalwert]{Kapitalwerte} wie üblich für $\kappa_t$
+				\item Berechne $\kappa_{t,2} = \frac{\kappa_{T_1^*}}{(1+i)^t}$ mit $T_1^* = \max_{t\in T} \kappa_t$
+				\item $\kappa_{ges}=\kappa_t+\kappa{t_2}$
 			\end{itemize}
 	\end{enumerate}
 
